@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>合利他命EX PLUS強效錠</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=640,user-scalable=0">
+    <!-- hiding the Browser’s User Interface -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- meta start -->
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="copyright" content="" />
+    <link rel="image_src" href="" />
+    <!-- iOS 6 -->
+    <meta name="apple-mobile-web-app-title" content="">
+    <!-- OG -->
+    <meta property="og:title" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="fb:app_id" content="" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!-- css start-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/indexPage.css">
+
+    <!-- js start-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Include the Swiper library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+    <script src="js/lib/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
+    <!-- Swiper JS Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue-awesome-swiper@3.1.2/dist/vue-awesome-swiper.js"></script>
+    <script type="text/javascript">
+        Vue.use(window.VueAwesomeSwiper)
+        Vue.use(VueScrollTo, {
+            duration: 1000,
+            easing: "ease",
+        })
+    </script>
+
+    <!-- archung js -->
+    <script type="text/javascript" src="js/ChungTool.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.vide.min.js"></script>
+
+
+</head>
+
+<body>
+    <div id="app">
+        <div id="header">
+            <div class="innerContainer">
+                <a href="https://archung.github.io/alinamin_index/" class="logo"></a>
+                <div class="m_menuBtn phoneShow" @click='showPhoneMenu=true;'></div>
+                <div class="menuBox boldTxt f16 phoneHide" @click=''>
+                    <!-- <a href="#" class="menuBtn">EX PLUS強效錠</a> -->
+                    <span class="dropdown">
+                        <a class="dropdown-toggle menuBtn" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            EX PLUS強效錠
+                        </a>
+                        <div class="dropdown-menu p-0 mt-4 f16" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item py-4 px-5 ta_c" href="#" v-scroll-to="{el: '#sick',offset: 150}">甩不掉的酸痛問題</a>
+                            <a class="dropdown-item py-4 px-5 ta_c" href="#" v-scroll-to="{el: '.productPage',offset: 0}">了解EX
+                                PLUS強效錠</a>
+                            <a class="dropdown-item py-4 px-5 ta_c" href="#" v-scroll-to="{el: '.storePage',offset: 0}">哪裡買?</a>
+                            <a class="dropdown-item py-4 px-5 ta_c" href="#" v-scroll-to="{el: '.qa',offset: 0}">使用者常有的問題</a>
+                        </div>
+                    </span>
+                    </span>
+                    <!-- <a href="#" class="menuBtn">抗疲勞用A25</a> -->
+                </div>
+            </div>
+        </div>
+        <transition name="rightIn">
+
+            <div id="m_menuPop" v-if='showPhoneMenu'>
+                <div class="clozBtn" @click='showPhoneMenu=false;'></div>
+                <div class="logo"></div>
+                <div class="menuWrap">
+                    <div class="menuBox">
+                        <a  href="#" v-scroll-to="{el: '#sick',offset: 150}" @click='showPhoneMenu=false;'>甩不掉的酸痛問題</a>
+                        <a  href="#" v-scroll-to="{el: '.productPage',offset: 0}" @click='showPhoneMenu=false;'>了解EX
+                            PLUS強效錠</a>
+                        <a  href="#" v-scroll-to="{el: '.storePage',offset: 0}" @click='showPhoneMenu=false;'>哪裡買?</a>
+                        <a  href="#" v-scroll-to="{el: '.qa',offset: 0}" @click='showPhoneMenu=false;'>使用者常有的問題</a>
+                    </div>
+                    <div class="menuBox light">
+                        <a  target='_blank' href="https://archung.github.io/alinamin_index/">首頁</a>
+                        <!-- <a class="" href="#" v-scroll-to="{el: '.productPage',offset: 0}" @click='showPhoneMenu=false;'>醫療級B群A25</a> -->
+                    </div>
+                </div>
+            </div>
+        </transition>
+
+        <div class="mainContainer">
+            <div id="page-point1" data-point='index'></div>
+            <section id="index" class="page">
+                <div class="indexWrap red">
+                    <div class="innerContainer ">
+                        <div class="man"></div>
+                        <div class="titleBox">
+                            <div class="t1"></div>
+                            <div class="t2"></div>
+                            <div class="t3"></div>
+                        </div>
+                        <div class="balls"></div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="sick" class="page">
+                <div class=" idw2">
+                    <div class="yellow"></div>
+                    <div class="innerContainer ">
+                        <div class="proBox">
+                            <div class="txt"></div>
+                            <div class="pro"></div>
+                        </div>
+                        <div class="videoBtn picBtn phoneHide" @click='videoPop=true'>
+                            <div class="pic"></div>
+                            <div class="pic2"></div>
+                        </div>
+                        <h3 class='se_num phoneHide f9'>衛署藥輸字第025431號 北市衛藥廣字第107080308號</h3>
+                    </div>
+                </div>
+                <div class="innerContainer">
+                    <div class="phoneShow mb_70">
+                        <div class="videoWrap  mb-3">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0_eYPEAmIcI?rel=0&amp;showinfo=0"
+                                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                        <h3 class='ta_c'>衛署藥輸字第025431號 北市衛藥廣字第107080308號</h3>
+                    </div>
+                    <div class="t1"></div>
+                    <div id="sticky-point"></div>
+                    <div id="page-point2" data-point='sick'></div>
+
+                    <div class="sickMenu" id='sickMenu'>
+                        <div class="sBtn picBtn" v-scroll-to="{el: '#sticky-point',offset: -70}" @click='sickChannel=1'>
+                            <div class="pic" style="background-image: url('images/sickPic01.png');"></div>
+                            <div class="pic2" style='background-image: url("images/sickTxt01.png");'></div>
+                        </div>
+                        <div class="sBtn picBtn" v-scroll-to="{el: '#sticky-point',offset: -70}" @click='sickChannel=2'>
+                            <div class="pic" style="background-image: url('images/sickPic02.png');"></div>
+                            <div class="pic2" style='background-image: url("images/sickTxt02.png");'></div>
+                        </div>
+                        <div class="sBtn picBtn " v-scroll-to="{el: '#sticky-point',offset: -70}" @click='sickChannel=3'>
+                            <div class="pic" style="background-image: url('images/sickPic03.png');"></div>
+                            <div class="pic2" style='background-image: url("images/sickTxt03.png");'></div>
+                        </div>
+                    </div>
+                    <transition name="fadeUp">
+                        <div class="sickContainer" v-if='sickChannel==1'>
+                            <div class="lineTxt">
+                                <h1 class="txt boldTxt">眼睛疲勞</h1>
+                            </div>
+                            <div class="s_boxs">
+                                <div class="s_box">
+                                    <h1>3C追劇族</h1>
+                                    <div class="ptBox">
+                                        <div class="pic" style='background-image: url("images/s1_1.jpg");'></div>
+                                        <h2 class="txt">
+                                            工作時需要長時間盯著電腦，上下班搭車時總是拿出手機追劇，回到家也會用平板追劇。
+                                            <span class="boldTxt">眼睛常感到酸澀、無法聚焦，好苦惱?</span>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="s_box">
+                                    <h1>銀髮族</h1>
+                                    <div class="ptBox">
+                                        <div class="pic" style='background-image: url("images/s1_2.jpg");'></div>
+                                        <h2 class="txt">
+                                            這幾年發現雙眼總是有酸澀感，看電腦或手機都不能太久，明顯容易疲勞，常常不自覺地無法對焦。
+                                            <span class="boldTxt">年紀漸長，好多困擾只有自己懂，真的好無奈！</span>
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </transition>
+                    <transition name="fadeUp">
+                        <div class="sickContainer" v-if='sickChannel==2'>
+                            <div class="lineTxt">
+                                <h1 class="txt boldTxt">腰背酸痛</h1>
+                            </div>
+                            <div class="s_boxs">
+                                <div class="s_box">
+                                    <h1>家庭主婦</h1>
+                                    <div class="ptBox">
+                                        <div class="pic" style='background-image: url("images/s2_1.jpg");'></div>
+                                        <h2 class="txt">
+                                            每天洗衣、打掃，整理家裡、照顧小孫子，腰不知彎了多少次？
+                                            <span class="boldTxt">這幾年腰背痠痛問題反覆發生，難道只能接受自己年紀大了的事實？</span>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="s_box">
+                                    <h1>銀髮族</h1>
+                                    <div class="ptBox">
+                                        <div class="pic" style='background-image: url("images/s2_2.jpg");'></div>
+                                        <h2 class="txt">
+                                            平時喜歡到隔壁張太太家打麻將，幾圈打下來不知不覺幾個小時就過去，一站起來發現腰都快斷了！
+                                            <span class="boldTxt">上了年紀，連小小的休閒嗜好也會讓腰背痠痛反覆發生，真是無奈啊！</span>
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </transition>
+                    <transition name="fadeUp">
+                        <div class="sickContainer" v-if='sickChannel==3'>
+                            <div class="lineTxt">
+                                <h1 class="txt boldTxt">肩頸僵硬</h1>
+                            </div>
+                            <div class="s_boxs">
+                                <div class="s_box">
+                                    <h1>專業人士</h1>
+                                    <div class="ptBox">
+                                        <div class="pic" style='background-image: url("images/s3_1.jpg");'></div>
+                                        <h2 class="txt">
+                                            帶領公司中重要團隊，會議一個接一個，幾乎天天加班，
+                                            <span class="boldTxt">長時間使用電腦，肩頸緊繃，精神壓力與身體的疲勞，似乎沒有時間可以調適，我該怎麼辦?</span>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="s_box">
+                                    <h1>銀髮族</h1>
+                                    <div class="ptBox">
+                                        <div class="pic" style='background-image: url("images/s3_2.jpg");'></div>
+                                        <h2 class="txt">
+                                            退休後本想過著悠閒舒服的生活，但是肩頸痠痛的老毛病，怎麼治都不見好轉，雖然有時會舒緩，但就是會一直發作。
+                                            <span class="boldTxt">反反覆覆，連心情都受影響！</span>
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </transition>
+                    <div id="sticky-point2"></div>
+                    <div class="redBtn phoneHide" v-scroll-to="{el: '#sticky-point',offset: -70}">
+                        其他痠痛
+                        <i class="arr"></i>
+                    </div>
+                </div>
+            </section>
+            <section class="title2 ">
+                <div class="yellowSlipBg"></div>
+                <div class="innerContainer">
+                    <div class="t2"></div>
+                </div>
+            </section>
+            <section class="sickgif">
+                <div class="innerContainer">
+                    <h2 class=''>其實會酸痛，是因為身體代謝降低，無法產生足夠能量，進而使神經與肌肉的酸痛問題反覆發生。
+                    </h2>
+                    <div class="imgWrap mt_b">
+                        <img src="images/sick.gif" alt="" srcset="">
+                    </div>
+                </div>
+            </section>
+            <section class="manWrapPage">
+                <div class="arrTop"></div>
+                <div class="innerContainer">
+                    <div class="talkPop"></div>
+                    <div class="man"></div>
+                </div>
+            </section>
+            <section class="productPage">
+                <div class="ballBgWrap">
+                    <div class="bg1" style='background-image: url("images/redBall_01.png");'></div>
+                    <div class="bg2" style='background-image: url("images/redBall_02.png");'></div>
+                    <div class="bg3" style='background-image: url("images/redBall_03.png");'></div>
+                </div>
+                <div class="innerContainer">
+                    <div class="proBox">
+                        <div class="pro"></div>
+                        <div class="t1"></div>
+                    </div>
+                    <div class="infoBox">
+                        <div class="proInfo"></div>
+                        <!-- <div class="info1 info"></div>
+                        <div class="info2 info"></div>
+                        <div class="info3 info"></div>
+                        <div class="info4 info"></div>
+                        <div class="info5 info"></div> -->
+                    </div>
+                </div>
+            </section>
+            <section class="ttedVbg" class='' data-vide-bg="video/bg" data-vide-options="position: 50% 50%">
+            </section>
+            <section class="ttedPage yellowBg">
+                <div class="ballBgWrap">
+                    <div class="bg1" style='background-image: url("images/yellowBall_01.png");'></div>
+                    <div class="bg2" style='background-image: url("images/yellowBall_02.png");'></div>
+                    <div class="bg3" style='background-image: url("images/yellowBall_03.png");'></div>
+                </div>
+                <div class="innerContainer">
+                    <div class="tpBox picRight">
+                        <div class="txt">
+                            <!-- <h1 class='whiteUnderLine mb_b'>神奇的活性TTFD誘導體</h1> -->
+                            <h2><span class="boldTxt">合利他命強效錠</span>能產生大量的活性維生素B1。能作用在人體的神經與肌肉組織，輕鬆舒緩「眼睛疲勞」、「肩頸僵硬」、 「腰背酸痛」症狀，非常有效。
+                                </h2>
+                        </div>
+                        <div class="pic">
+                            <img src="images/TTFD.gif" alt="">
+                            <div class="f9 ta_r">衛署藥輸字第025431號 北市衛藥廣字第107080309號</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="infoPage">
+                <div class="arrTop"></div>
+                <div class="innerContainer">
+                    <div class="title"></div>
+                    <div class="txtBox">
+                        <div class="lineTxt">
+                            <h1 class="txt">產地</h1>
+                        </div>
+                        <h2 class='mt_s'>日本製造 原裝進口</h2>
+                    </div>
+                    <div class="txtBox mt_70">
+                        <h1>內含的成分</h1>
+                        <img src="images/infoTable.png" alt="" class='mt_s phoneHide'>
+                        <img src="images/m_infoTable.png" alt="" class='mt_s phoneShow'>
+                    </div>
+                    <div class="txtBox mt_70">
+                        <div class="lineTxt">
+                            <h1 class="txt">該怎麼吃呢?</h1>
+                        </div>
+                        <h2 class='mt_s'>15歲以上，1次2-3錠，一日一次。 飯後搭配開水服用</h2>
+                    </div>
+                </div>
+            </section>
+            <section class="storePage">
+                <div class="innerContainer">
+                    <div id='store' class='p-3 '>
+                        <div class="title bigEn">STORE</div>
+                        <h1>哪裡買?</h1>
+                        <div class="btnWrap mt-5 pb-5">
+                            <div class="btn py-3 px-3" :class='{active:storeData.storeChannel==1}' @click='storeData.storeChannel=1'>
+                                <h2>連鎖通路</h2>
+                            </div>
+                            <div class="btn py-3 px-3" :class='{active:storeData.storeChannel==2}' @click='storeData.storeChannel=2'>
+                                <h2>實體通路</h2>
+                            </div>
+                        </div>
+                        <transition name="fadeUp">
+                            <div class="pycialStores" v-if='storeData.storeChannel==1'>
+                                <div class="swiperWrap"  id='pycialStores-wrap'>
+                                    <swiper :options="storeData.swiperOption" id='pycialStores-swiper' class='mt-5 pb-5'>
+                                        <swiper-slide v-for='(store,index) in storeData.pycialStores' :key='index'>
+
+                                            <div class="card my-3">
+                                                <img :src="store.img" class="card-img-top">
+                                                <div class="card-body">
+                                                    <h2 class="card-title font-weight-bold">{{ store.name }}</h2>
+                                                </div>
+                                            </div>
+                                        </swiper-slide>
+
+                                    </swiper>
+                                    <div class="swiper-button-prev" slot="button-prev"></div>
+                                    <div class="swiper-button-next" slot="button-next"></div>
+                                </div>
+                            </div>
+                        </transition>
+                        <transition name="fadeUp">
+                            <div class="pharmacyStores" v-if='storeData.storeChannel==2'>
+
+                                <div class="btnWrap mt-5 pb-5 border-0">
+                                    <div class="costomSelect" style='width:calc(50% - 10px);'>
+                                        <select class=" py-3 px-3 f18" v-model="storeData.storeCity1" @change="storeData.storeCity2=''">
+                                            <option disabled selected value="">請選擇縣市</option>
+                                            <option v-for='(citi,index) in storeData.citi1Arr' :key='index'>{{citi}}</option>
+                                        </select>
+                                    </div>
+                                    <div class="costomSelect" style='width:calc(50% - 10px);'>
+                                        <select class=" py-3 px-3 f18" v-model="storeData.storeCity2">
+                                            <option disabled selected value="">請選擇區域</option>
+                                            <option v-for='(citi,index) in citiSelect2' :key='index'>{{citi}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="swiperWrap" id='pharmacyStores-wrap'>
+                                    <swiper :options="storeData.swiperOption2" id='pharmacyStores-swiper' class='pb-5'>
+                                        <swiper-slide v-for='(store,index) in showCitiArr' :key='index'>
+                                            <div class="card my-3 border-0 p-3">
+                                                <h1 class=''>{{ store.name }}</h1>
+                                                <h2 class="addr my-3 grayTxt">{{ store.addr}}</h2>
+                                                <a :href="'tel:'+store.phone" type='tel' class='rTxt'>
+                                                    <h2>{{store.phone}}</h2>
+                                                </a>
+                                            </div>
+                                        </swiper-slide>
+                                    </swiper>
+                                    <div class="swiper-button-prev" slot="button-prev"></div>
+                                    <div class="swiper-button-next" slot="button-next"></div>
+                                </div>
+                            </div>
+                        </transition>
+                    </div>
+                </div>
+            </section>
+            <section class="qa">
+                <div class="innerContainer">
+                    <div class="title bigEn">Q&A</div>
+                    <h1>使用者常有的問題</h1>
+                    <div id="qaWrap" class='mt-5'>
+                        <div class="qaBox my-3" v-for='(qa,index) in qaData.qas' :key='index'>
+                            <div class="card question btn" data-toggle="collapse" :data-target="'#collapse'+index"
+                                :aria-controls="'collapse'+index">
+                                <div class="card-body py-0 px-3 ">
+                                    <span class="qaNum bigEn yTxt f40">Q{{ index }}</span>
+                                    <span class="text f18">{{ qa.q }}</span>
+                                    <span class="fa fa-angle-down"></span>
+                                </div>
+                            </div>
+                            <div :id="'collapse'+index" class="collapse answer" data-parent="#qaWrap">
+                                <div class="card border-0 answer">
+                                    <div class="card-body pb-5">
+                                        <h2>{{ qa.a }}</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <div class="footer">
+            <div class="innerContainer">
+                <div class="dfBox">
+                    <div class="logo-cn"></div>
+                    <div class="contectBox">
+                        <div class="txtBox mr-30">
+                            <span class='redTxt'>TEL</span>
+                            <span>0800-008999</span>
+                        </div>
+                        <div class="txtBox">
+                            <span class='redTxt'>ADDRESS</span>
+                            <span>110 台北市信義區松高路1號17F</span>
+                        </div>
+                    </div>
+                </div>
+                <h3>本網站係台灣武田工業股份有限公司所擁有，其內容之著作權一屬於台灣武田工業股份有限公司，非經同意不得轉載。
+                    <br> Copyright©Takeda Pharmaceutical Taiwan Ltd. 2018台灣武田藥品工業股份有限公司版權所有
+                </h3>
+            </div>
+        </div>
+        <transition name="fade">
+            <div class="popPage" v-if='videoPop==true'>
+                <div class="popComtainer">
+                    <div class="clozBtn far fa-times-circle" @click='videoPop=false'></div>
+
+                    <div class="videoWrap" v-if='videoPop==true'>
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0_eYPEAmIcI?rel=0&amp;showinfo=0"
+                            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script type="text/javascript" src="js/index.js"></script>
+    <!-- <script src="js/lib/skrollr.js"></script>
+    <script type="text/javascript">
+        var s = skrollr.init();
+    </script> -->
+</body>
+
+</html>

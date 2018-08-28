@@ -1,0 +1,612 @@
+
+html,body 
+	// width: 100%
+	// height: 100%
+body 
+	
+section
+	position: relative
+	z-index: 2
+	background-color: #e8e8e8
+.mainContainer
+	overflow-x: hidden
+.yellowBg
+	+coverBg
+	+bgi('bg_y.jpg')
+h1
+	font-size: 25px
+	font-weight: bold
+	+phone 
+		font-size: 38px
+h2
+	font-size: 18px
+	+phone 
+		font-size: 28px
+.redBtn
+	width: 320px
+	height: 60px	
+	background-color: #d5000e
+	border-radius: 30px
+	letter-spacing: 5px
+	line-height: 60px
+	text-align: center
+	font-size: 25px
+	font-weight: bold
+	color: white
+	vertical-align: text-top
+	margin: 0 auto
+	cursor: pointer
+	+dTime
+	&:hover
+		background-color: darken(#d5000e,4)
+	.arr
+		+bg('circleArrUp.png')
+		margin-left: 5px
+		display: inline-block
+		vertical-align: text-top
+		margin-top: 4px
+.innerContainer		
+	width: 100%
+	padding: 0 50px
+	max-width: 1024px
+	margin: 0 auto
+	height: 100%
+	position: relative
+	+phone
+		padding: 0 25px
+=slip 
+	-webkit-clip-path: polygon(0 0,100% calc( 7vw),100% 100%,0 calc(100% - 7vw))
+	clip-path: polygon(0 0,100% calc( 7vw),100% 100%,0 calc(100% - 7vw))
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+
+=centerX
+	+translateX(-50%)
+	left: 50%
+=center
+	+transform(translateX(-50%) translateY(-50%))
+	left: 50%
+	top: 50%
+	position: absolute
+	
+.picBtn
+	display: flex
+	position: relative
+	cursor: pointer
+	overflow: hidden
+	.pic 
+		position: absolute
+		width: 100%
+		height: 100%
+		+coverBg
+		+dTime(.6s)
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 0%
+			height: 100%
+			background-color: rgba(black,0.3)
+			+dTime
+	.pic2
+		+center
+		+dTime
+		
+	&:hover
+		.pic
+			+scale(1.1)
+			&:after
+				width: 100%
+		.btn
+			+transform(translateX(-50%) translateY(-50%) scale(1.1))
+		
+.logo
+	+bg('logo.png')	
+#header
+	height: 70px
+	position: fixed
+	top: 0	
+	left: 0
+	width: 100%
+	z-index: 20
+	background-color: rgba(214,3,14,0)
+	+dTime
+	
+	&.redBg
+		background-color: rgba(214,3,14,1)
+	// background-color: red
+	.innerContainer
+		display: flex
+		justify-content: space-between
+		align-items: center
+	.menuBox
+		> a
+			margin-left: 30px
+		.menuBtn
+			cursor: pointer
+			+dTime 
+			&:hover 
+				color: white
+				text-decoration: none
+	.m_menuBtn
+		+bg('m_menuBtn.png')
+	.dropdown-menu
+		background-color: #bf000f
+		.dropdown-item
+			color: white
+			+dTime
+			&:hover
+				background-color: #8f000b
+#m_menuPop
+	position: fixed
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	z-index: 50
+	background-color: #d50011
+	.clozBtn
+		+bg('m_cloz.png')
+		position: absolute
+		right: 25px
+		top: 25px
+	.logo	
+		position: absolute
+		left: 25px
+		top: 25px
+	.menuWrap
+		display: flex
+		.menuBox
+			padding: 150px 25px
+			height: 100%
+			width: 50%
+			flex: 0 0 50%
+			a
+				display: block
+				font-size: 28px
+				height: 120px
+				line-height: 120px
+				text-align: right
+				color: white
+				&:not(:last-child)
+					border-bottom: 1px solid white
+		.menuBox:nth-child(1)
+		
+#index
+	.red
+		+coverBg
+		+bgi('ex_bg.jpg')
+		height: 735px
+	
+	
+	.man
+		+bg('ex_index_m.png')
+		+centerX
+		position: absolute
+		bottom: 0 
+		margin-left: 50px
+	.balls
+		position: absolute
+		+bg('ex_index_m1.png')
+		+centerX
+		top: 280px
+		margin-left: 271px
+		+phone 
+			margin-left: 178px
+			+transform(translateX(-50%) scale(.9))
+	.titleBox
+		position: absolute
+		+centerX
+		margin-left: -462px
+		top: 189px
+		+phone 
+			margin-left: -313px
+			top: 255px
+			+transform(translateX(-50%) scale(.7))
+		> * 
+			position: absolute
+			top: 0	
+			left: 0
+		.t1
+			+bg('ex_index_t1.png')
+		.t2
+			+bg('ex_index_t2.png')
+		.t3
+			+bg('ex_index_t3.png')
+	
+		
+		
+#sick
+	.innerContainer
+		padding-top: 280px
+		+phone
+			padding-top: 200px
+	.videoWrap
+		+aspect-ratio(560,315)
+		border: 2px solid white
+		border-radius: 5px
+		width: 100%
+		iframe
+			+fullDiv
+			position: absolute
+
+	.idw2
+		height: 644px
+		position: absolute
+		margin-top: -7vw
+		top: 0
+		left: 0
+		width: 100%
+		+phone
+			height: 1000px
+		.yellow
+			+coverBg
+			+bgi('bg_y.jpg')
+			+slip
+			position: absolute
+			top: 0
+			width: 100%
+	.proBox
+		position: absolute
+		top: -150px
+		.txt
+			+bg('ex_index_tag.png')
+			position: absolute
+			top: 140px
+			left: 105px
+		.pro
+			position: absolute
+			+bg('pro.png')
+	.videoBtn
+		width: 208px
+		height: 128px
+		position: absolute
+		right: 0
+		top: 0
+		border: 2px solid white
+		border-radius: 5px
+		background-color: white
+		+phone
+			width: 90%
+			position: relative
+
+		.pic
+			+bg('videoBg.png')
+		.pic2
+			+bg('playBtn.png')
+	.t1
+		+bg('ex_t1.png')
+		margin: 0 auto
+	.sickMenu
+		margin-top: 70px
+		width: 100%
+		display: flex
+		justify-content: space-between
+		
+
+		.sBtn
+			width: 30%
+			+aspect-ratio(1,1)
+			.pic2
+				width: 94px
+				height: 122px
+				margin-top: 10px
+		+phone
+			margin-left: -25px
+			width: calc(100% + 50px)
+			.sBtn
+				width: 34%
+	.sickContainer
+		margin-top: 70px
+		
+		.s_boxs
+			margin-top: 50px
+
+			.s_box
+				padding: 35px 0 50px
+				&:not(:last-child)
+					border-bottom: 2px solid $y
+				.ptBox
+					margin-top: 25px
+					display: flex
+					justify-content: space-between
+					align-items: center
+					+phone
+						flex-wrap: wrap
+				.pic 
+					+aspect-ratio(452,276)
+					width: 452px
+					+coverBg
+					flex-grow: 0 
+					flex-shrink: 0.1
+					+phone
+						width: 100%
+				.txt
+					padding: 25px
+					+phone
+						padding: 25px 0
+.title2
+	padding-top: 50px
+	height: 400px
+	margin-top: -2px
+	.yellowSlipBg
+		+coverBg
+		+bgi('bg_y.jpg')
+		+slip
+		
+	.innerContainer
+		display: flex
+		justify-content: center
+		align-items: center
+		.t2
+			+bg('t2.png')
+.sickgif
+	padding-bottom: 400px
+	margin-top: -2px
+	padding-top: 15px
+	.innerContainer
+		max-width: 780px
+	.imgWrap
+		border-bottom: 2px solid $y
+		padding-bottom: 50px
+.manWrapPage
+	+coverBg
+	+bgi('bg_y.jpg')
+	position: relative
+	.arrTop
+		width: 100%
+		height: 420px
+		+bgi('manBg.png')
+		background-size: 100% 100%
+		position: absolute
+		top: 0	
+		left: 0 
+
+	.innerContainer
+		height: 600px
+		position: relative
+		.talkPop
+			position: absolute
+			+centerX
+			bottom: 646px
+			+bg('ex_pic01.png')
+		.man
+			position: absolute
+			bottom: 0
+			+centerX
+			+bg('ex_pic02.png')
+
+.ballBgWrap
+	position: absolute
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	> *
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0	
+		left: 0
+		+coverBg
+.productPage
+	+coverBg
+	+bgi('ex_bg.jpg')
+	padding: 100px 0px
+	position: relative
+	
+		
+	.proBox
+		margin-bottom: 150px
+		.pro
+			+bg('pro_b.png')
+			margin: 0 auto
+		.t1
+			+bg('proTitle.png')
+			margin: 0px auto
+	.infoBox
+		position: relative
+		// padding: 100px 0 165px
+		
+		.proInfo
+			+bg('ex_index_l1.png')
+			margin: 100px auto 165px
+			+phone 
+				+bg('m_ex_index_l1.png')
+		.info
+			position: absolute
+			top: 0
+		.info1
+			top: 80px
+			left: 0
+		.info2
+			top: 315px
+			left: 0
+		.info3
+			right: 0
+			top: 0px
+
+		.info4
+			right: 0
+			top: 226px
+		.info5
+			right: 0
+			top: 468px
+				
+		@for $i from 1 through 6
+			.info#{$i}
+				+bg('info0#{$i}.png')
+.ttedVbg
+	width: 100vw
+	height: 100vh
+	position: fixed
+	left: 0
+	top: 0
+	z-index: 0 
+.ttedPage
+	margin: 90vh 0
+	position: relative
+	.innerContainer
+		+bgi('ttedBg.png')
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		padding-top: 180px
+		padding-bottom: 180px
+
+.infoPage
+	padding-bottom: 100px
+	background-color: white
+	position: relative
+	.innerContainer
+		overflow: hidden
+	.arrTop
+		width: 100%
+		height: 350px
+		+bgi('yellowArrBg.png')
+		background-size: 100% 100%
+		position: absolute
+		top: 0	
+		left: 0 
+	.title
+		+bg('infoTitle.png')
+		margin: 120px auto 160px
+		
+
+.qa
+	background-color: #e4e4e4
+	padding: 100px 0
+		
+	.card-body
+		display: flex
+		align-items: center
+		.qaNum
+			width: 70px
+			display: inline-block
+		.text
+	.qaBox
+		.fa
+			transition-duration: .3s
+			font-size: 3rem
+			color: $y
+			margin-left: auto
+			
+	.qaBox[aria-expanded="true"]	
+		.fa
+			transform: rotate(180deg)
+	.question
+	
+		.text
+			white-space: normal
+			text-align: left
+			max-width: calc(100% - 110px)
+			padding: 20px
+	.answer
+		background-color: transparent
+.storePage
+	background-color: #f6f5f5
+	padding: 100px 0
+	.btnWrap
+		display: flex
+		justify-content: space-between
+		border-bottom: 1px solid #e0dede
+		.btn
+			width: calc(50% - 10px)
+			border-radius: 0px
+			background-color: #dddddd
+			text-align: left
+			+dTime
+			&:hover
+				background-color: darken(#dddddd,10)
+			&.active
+				background-color: #cf000a
+				color: white
+		
+
+.popPage
+	position: fixed
+	background-color: rgba(black,0.7)
+	z-index: 100
+	display: flex
+	justify-content: center
+	align-items: center
+	.popComtainer
+		+aspect-ratio(560,315)
+		background-color: black
+		width: 85vw
+		.clozBtn
+			position: absolute
+			right: 0
+			top: -60px
+			cursor: pointer
+			font-size: 50px
+			color: white
+		.videoWrap
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+		
+.fadeUp-enter-active
+	+dTime(.6s)
+	position: relative
+	top: 0
+.fadeUp-enter
+	opacity: 0
+	top: 30px
+
+
+.fade-enter-active, .fade-leave-active 
+	transition: opacity .5s
+	.popComtainer
+		+dTime(.6s)
+
+.fade-enter, .fade-leave-to 
+	opacity: 0
+	.popComtainer
+		+scale(0.8)
+
+.rightIn-enter-active, .rightIn-leave-active 
+	+dTime(.6s)
+.rightIn-enter, .rightIn-leave-to 
+	margin-left: 100vw
+
+
+.costomSelect
+	padding: 0
+	margin: 0
+	border: 1px solid #ccc
+	overflow: hidden
+	background-color: white
+	background: white
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		+bg('redArr_d.png')
+		right: 15px
+		top: 50%
+		margin-top: -6px
+		pointer-events: none
+	select
+		width: 130%
+		border: none
+		box-shadow: none
+		background-color: transparent
+		background-image: none
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+		&:focus
+			outline: none
+
+#pharmacyStores-swiper
+	.swiper-slide
+		border-bottom: 1px solid #c6c6c6
+		
+		.card 
+			background-color: transparent
