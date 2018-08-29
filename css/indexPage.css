@@ -4072,6 +4072,11 @@ h2 {
   background-color: #e4e4e4;
   padding: 100px 0;
 }
+.qa .qaTxt {
+  width: 96px;
+  height: 54px;
+  background-image: url("../images/qaTxt.png");
+}
 .qa .card-body {
   display: flex;
   align-items: center;
@@ -4295,6 +4300,10 @@ h2 {
     height: 82px;
     background-image: url("../images/m_sqArr_right.png");
   }
+}
+
+.dropdown-toggle::after {
+  display: none;
 }
 
 .padShow {

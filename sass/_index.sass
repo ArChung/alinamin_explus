@@ -500,7 +500,8 @@ h2
 .qa
 	background-color: #e4e4e4
 	padding: 100px 0
-		
+	.qaTxt
+		+bg('qaTxt.png')	
 	.card-body
 		display: flex
 		align-items: center
@@ -656,4 +657,5 @@ h2
 			right: -38px
 			+bg('m_sqArr_right.png')
 			
-		
+.dropdown-toggle::after
+	display: none

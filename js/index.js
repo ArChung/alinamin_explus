@@ -31,7 +31,7 @@ var app = new Vue({
             },
             swiperOption2: {
                 slidesPerView: 2,
-                slidesPerColumn: 2,
+                slidesPerColumn: 3,
                 spaceBetween: 0,
                 breakpoints: {
                     1024: {
@@ -51,7 +51,7 @@ var app = new Vue({
                 },
                 {
                     name: 'Costco',
-                    img: './images/m00.png',
+                    img: './images/m15.png',
                     url: 'https://www.costco.com.tw/store-finder'
                 },
                 {
@@ -71,7 +71,7 @@ var app = new Vue({
                 },
                 {
                     name: '大樹',
-                    img: './images/m00.png',
+                    img: './images/m14.png',
                     url: 'http://www.greattree.com.tw/store.aspx'
                 },
                 {
@@ -111,7 +111,7 @@ var app = new Vue({
                 },
                 {
                     name: '日藥',
-                    img: './images/m00.png',
+                    img: './images/m13.png',
                     url: 'http://www.jpmed.com.tw/shopinfo                       '
                 },
                 {
