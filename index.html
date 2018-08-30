@@ -82,7 +82,7 @@
                             EX PLUS強效錠
                         </a>
                         <div class="dropdown-menu p-0 mt-4 f16" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item py-4 px-5 ta_c" href="#" v-scroll-to="{el: '#sick',offset: 150}">甩不掉的酸痛問題</a>
+                            <a class="dropdown-item py-4 px-5 ta_c" href="#" v-scroll-to="{el: '#sticky-point',offset: -250}">甩不掉的酸痛問題</a>
                             <a class="dropdown-item py-4 px-5 ta_c" href="#" v-scroll-to="{el: '.productPage',offset: 0}">了解EX
                                 PLUS強效錠</a>
                             <a class="dropdown-item py-4 px-5 ta_c" href="#" v-scroll-to="{el: '.storePage',offset: 0}">哪裡買?</a>
@@ -101,7 +101,7 @@
                 <div class="logo"></div>
                 <div class="menuWrap">
                     <div class="menuBox">
-                        <a  href="#" v-scroll-to="{el: '#sick',offset: 150}" @click='showPhoneMenu=false;'>甩不掉的酸痛問題</a>
+                        <a  href="#" v-scroll-to="{el: '#sticky-point',offset: -150}" @click='showPhoneMenu=false;'>甩不掉的酸痛問題</a>
                         <a  href="#" v-scroll-to="{el: '.productPage',offset: 0}" @click='showPhoneMenu=false;'>了解EX
                             PLUS強效錠</a>
                         <a  href="#" v-scroll-to="{el: '.storePage',offset: 0}" @click='showPhoneMenu=false;'>哪裡買?</a>
@@ -116,7 +116,7 @@
         </transition>
 
         <div class="mainContainer">
-            <div id="page-point1" data-point='index'></div>
+            <div id="page-point1" class='page-point' data-point='1'></div>
             <section id="index" class="page">
                 <div class="indexWrap red">
                     <div class="innerContainer ">
@@ -133,7 +133,7 @@
                 </div>
 
             </section>
-
+            
             <section id="sick" class="page">
                 <div class=" idw2">
                     <div class="yellow"></div>
@@ -292,6 +292,7 @@
                     <div class="man"></div>
                 </div>
             </section>
+            <div id="page-point2" class='page-point' data-point='2'></div>
             <section class="productPage">
                 <div class="ballBgWrap">
                     <div class="bg1" style='background-image: url("images/redBall_01.png");'></div>
@@ -359,6 +360,7 @@
                     <h3 class='mt-5'>衛署藥輸字第025431號 北市衛藥廣字第107080309號</h3>
                 </div>
             </section>
+            <div id="page-point3" class='page-point' data-point='3'></div>
             <section class="storePage">
                 <div class="innerContainer">
                     <div id='store' class='p-3 '>
@@ -431,6 +433,7 @@
                     </div>
                 </div>
             </section>
+            <div id="page-point3" class='page-point' data-point='4'></div>
             <section class="qa">
                 <div class="innerContainer">
                     <div class="title bigEn qaTxt mb-3"></div>
@@ -490,6 +493,16 @@
                 </div>
             </div>
         </transition>
+        <div class="pageNavWrap phondeHide">
+            <div class="pageNavs">
+                <div class="pageNav" :class='{"active": posIndex==1}' v-scroll-to="{el: '#sticky-point',offset: -150}"></div>
+                <div class="pageNav" :class='{"active": posIndex==2}' v-scroll-to="{el: '.productPage',offset: 0}"></div>
+                <div class="pageNav" :class='{"active": posIndex==3 }' v-scroll-to="{el: '.storePage',offset: 0}"></div>
+                <div class="pageNav" :class='{"active": posIndex==4}' v-scroll-to="{el: '.qa',offset: 0}"></div>
+                
+                    
+            </div>
+        </div>
     </div>
 
     <script type="text/javascript" src="js/index.js"></script>

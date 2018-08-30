@@ -3975,8 +3975,8 @@ h2 {
   position: relative;
 }
 .productPage .infoBox .proInfo {
-  width: 933px;
-  height: 508px;
+  width: 793px;
+  height: 654px;
   background-image: url("../images/ex_index_l1.png");
   margin: 100px auto 165px;
 }
@@ -4322,6 +4322,29 @@ h2 {
 
 .dropdown-toggle::after {
   display: none;
+}
+
+.pageNavWrap {
+  position: fixed;
+  top: 50%;
+  right: 30px;
+  z-index: 50;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.pageNavWrap .pageNavs .pageNav {
+  width: 2px;
+  height: 50px;
+  background-color: #c4b170;
+  cursor: pointer;
+}
+.pageNavWrap .pageNavs .pageNav:not(:last-child) {
+  margin-bottom: 8px;
+}
+.pageNavWrap .pageNavs .pageNav.active {
+  background-color: #d1141d;
 }
 
 .padShow {

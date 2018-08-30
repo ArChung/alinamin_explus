@@ -168,7 +168,7 @@ var app = new Vue({
                 a: "請認明包裝上印有台灣武田、有中文標示的合利他命EX PLUS強效錠，才是合法自日本原裝進口的產品，從生產到配送嚴格依照法規管控品質，保障消費者用藥安全。全日文版本之產品並非台灣武田公司進口之包裝，亦非衛福部核准之產品，其商品來源與品質均缺乏保障。"
             }]
         },
-
+        posIndex: -1,
 
 
     },
@@ -203,7 +203,10 @@ var app = new Vue({
         }
     },
     watch: {
-
+        // posIndex(val){
+        //     console.log('posIndex' + val);
+        //     $('.pageNavWrap .pageNav').eq(val-1).addClass('active').
+        // }
     },
     mounted() {
         this.isPhone = ChungTool.isPhone();
@@ -214,9 +217,7 @@ var app = new Vue({
         var point2 = $('#sticky-point2');
         var sickMenu = $('#sickMenu');
         var mt = 0;
-        window.onscroll = function () {
-
-        }
+        
         setInterval(function () {
             let top = $(window).scrollTop();
             if (top > 200) {
@@ -225,8 +226,6 @@ var app = new Vue({
                 header.removeClass('redBg');
             }
             if (that.isPhone) {
-
-
                 let sickTop = top - point1.offset().top + 70;
                 let height = sickMenu.height();
                 let height2 = top - point2.offset().top + height + 70;
@@ -239,15 +238,15 @@ var app = new Vue({
                     sickMenu.removeClass('sticky');
                     sickMenu.css('top', 0)
                     point1.css('height', 0);
-
-
-
                 }
-
-                console.log('height: ', height2);
-                // sickMenu.css('top', that.limitRange(+sickTop, 0, +height) + 'px')
-
             }
+
+            var posIndex = 0;
+            $('.page-point').each(function(index,el){
+                var pos = top-$(el).offset().top;
+                posIndex = (pos + 500 > 0 )? index + 1 : posIndex;
+            });
+            that.posIndex = posIndex;
         }, 10)
 
     },

@@ -247,7 +247,7 @@ h2
 		border: 2px solid white
 		border-radius: 5px
 		width: 100%
-		iframe
+		iframe 
 			+fullDiv
 			position: absolute
 
@@ -667,3 +667,22 @@ h2
 			
 .dropdown-toggle::after
 	display: none
+
+.pageNavWrap
+	position: fixed
+	top: 50%
+	right: 30px
+	z-index: 50
+	+transform(translateY(-50%))
+
+	.pageNavs
+
+		.pageNav
+			width: 2px
+			height: 50px
+			background-color: #c4b170
+			cursor: pointer
+			&:not(:last-child)
+				margin-bottom: 8px
+			&.active
+				background-color: #d1141d
