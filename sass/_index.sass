@@ -54,7 +54,7 @@ h2
 .innerContainer		
 	width: 100%
 	padding: 0 50px
-	max-width: 1024px
+	max-width: 1440px
 	margin: 0 auto
 	height: 100%
 	position: relative
@@ -192,7 +192,14 @@ h2
 		+bgi('ex_bg.jpg')
 		height: 735px
 	
-	
+	.scaleWrap
+		+scale(1.15)
+		position: relative
+		width: 100%
+		height: 100%
+		@media screen and (max-width: 1200px)
+			+scale(1)
+			
 	.man
 		+bg('ex_index_m.png')
 		+centerX
@@ -205,7 +212,7 @@ h2
 		+centerX
 		top: 280px
 		margin-left: 271px
-		+phone 
+		+pad 
 			margin-left: 178px
 			+transform(translateX(-50%) scale(.9))
 	.titleBox
@@ -213,7 +220,7 @@ h2
 		+centerX
 		margin-left: -462px
 		top: 189px
-		+phone 
+		+pad 
 			margin-left: -313px
 			top: 255px
 			+transform(translateX(-50%) scale(.7))
@@ -232,7 +239,7 @@ h2
 		
 #sick
 	.innerContainer
-		padding-top: 280px
+		padding-top: 180px
 		+phone
 			padding-top: 200px
 	.videoWrap
@@ -245,7 +252,7 @@ h2
 			position: absolute
 
 	.idw2
-		height: 644px
+		height: 544px
 		position: absolute
 		margin-top: -7vw
 		top: 0
@@ -255,7 +262,7 @@ h2
 			height: 1000px
 		.se_num
 			position: absolute
-			right: 216px
+			right: 266px
 			top: 110px
 		.yellow
 			+coverBg
@@ -279,7 +286,7 @@ h2
 		width: 208px
 		height: 128px
 		position: absolute
-		right: 0
+		right: 50px
 		top: 0
 		border: 2px solid white
 		border-radius: 5px
@@ -340,7 +347,7 @@ h2
 						flex-wrap: wrap
 				.pic 
 					+aspect-ratio(452,276)
-					width: 452px
+					width: 40%
 					+coverBg
 					flex-grow: 0 
 					flex-shrink: 0.1
@@ -559,6 +566,7 @@ h2
 		+aspect-ratio(560,315)
 		background-color: black
 		width: 85vw
+		max-width: 960px
 		.clozBtn
 			position: absolute
 			right: 0
