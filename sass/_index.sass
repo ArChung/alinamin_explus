@@ -77,12 +77,19 @@ h2
 	left: 50%
 	top: 50%
 	position: absolute
-	
+.scaleWrap
+	+scale(1.15)
+	position: relative
+	width: 100%
+	height: 100%
+	+bigScreen
+		+scale(1)	
+		
 .picBtn
 	display: flex
 	position: relative
 	cursor: pointer
-	overflow: hidden
+	overflow: hidden 	
 	.pic 
 		position: absolute
 		width: 100%
@@ -192,13 +199,7 @@ h2
 		+bgi('ex_bg.jpg')
 		height: 735px
 	
-	.scaleWrap
-		+scale(1.15)
-		position: relative
-		width: 100%
-		height: 100%
-		@media screen and (max-width: 1200px)
-			+scale(1)
+	
 			
 	.man
 		+bg('ex_index_m.png')
@@ -426,7 +427,9 @@ h2
 	+bgi('ex_bg.jpg')
 	padding: 100px 0px
 	position: relative
-	
+	padding-top: 200px
+	+bigScreen
+		padding-top: 100px
 		
 	.proBox
 		margin-bottom: 150px
