@@ -3981,18 +3981,15 @@ h2 {
 .productPage .infoBox {
   position: relative;
 }
-.productPage .infoBox .proInfo {
-  width: 793px;
-  height: 654px;
-  background-image: url("../images/ex_index_l1.png");
-  margin: 100px auto 165px;
+.productPage .infoBox .t3 {
+  width: 444px;
+  height: 69px;
+  background-image: url("../images/t3.png");
+  margin: 0 auto;
 }
-@media screen and (max-width: 768px) {
-  .productPage .infoBox .proInfo {
-    width: 590px;
-    height: 718px;
-    background-image: url("../images/m_ex_index_l1.png");
-  }
+.productPage .infoBox .picWrap {
+  text-align: center;
+  margin: 50px auto 100px;
 }
 .productPage .infoBox .info {
   position: absolute;
@@ -4352,6 +4349,23 @@ h2 {
 }
 .pageNavWrap .pageNavs .pageNav.active {
   background-color: #d1141d;
+}
+
+#loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+  background-color: #d6020e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#loading img {
+  display: block;
 }
 
 .padShow {

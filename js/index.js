@@ -169,7 +169,7 @@ var app = new Vue({
             }]
         },
         posIndex: -1,
-
+        isLoaded: false,
 
     },
     computed: {
@@ -249,10 +249,35 @@ var app = new Vue({
             that.posIndex = posIndex;
         }, 10)
 
+        
+        //load
+        $('.loadingFirst').waitForImages({
+            finished: function() {
+                that.isLoaded = true;
+                that.playAni();
+            },
+            each: function(loaded, count, success) {
+                var r = Math.floor(loaded / count * 100);
+            },
+            waitForAll: true
+        }); 
+
+        $('.my-paroller').paroller();
     },
     methods: {
         limitRange(num, min, max) {
             return Math.max(Math.min(num, max), min)
+        },
+        playAni() {
+            
+            var tl = new TimelineMax({delay:.3});
+
+            tl.set('.ani_items',{autoAlpha:0})
+            .fromTo('#ani_man',.8,{bottom:-200},{bottom:0,autoAlpha:1})
+            .staggerFromTo('.ani_t',1.6,{left:60},{left:0,autoAlpha:1,ease:Power3.easeOut},.2,'-=.4')
+            .fromTo('#ani_balls',.6,{marginTop:0},{marginTop:-30,autoAlpha:1},'-=1.2')
+            .fromTo('#ani_pro',1,{marginLeft:200},{marginLeft:0,autoAlpha:1},'-=.8')
+            .fromTo('#ani_proTxt',.6,{marginLeft:-50},{marginLeft:0,autoAlpha:1},'-=.6')
         }
     }
 

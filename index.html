@@ -2,30 +2,31 @@
 <html lang="en">
 
 <head>
-    <title>合利他命EX PLUS強效錠</title>
+    <title>合利他命EX PLUS強效錠 輕鬆緩解重複發生的酸痛問題</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=640,user-scalable=0">
     <!-- hiding the Browser’s User Interface -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <!-- meta start -->
-    <meta name="title" content="" />
-    <meta name="description" content="" />
+    <meta name="title" content="合利他命EX PLUS強效錠 輕鬆緩解重複發生的酸痛問題" />
+    <meta name="description" content="台灣武田合利他命EX PLUS強效錠，日本製造原裝進口，內六大活化強效配方-活性TTFD誘導體能作用於神經與肌肉組織，每天輕鬆緩解痠痛。" />
     <meta name="keywords" content="" />
     <meta name="copyright" content="" />
     <link rel="image_src" href="" />
     <!-- iOS 6 -->
     <meta name="apple-mobile-web-app-title" content="">
     <!-- OG -->
-    <meta property="og:title" content="" />
-    <meta property="og:site_name" content="" />
-    <meta property="og:description" content="" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="" />
-    <meta property="og:url" content="" />
-    <meta property="fb:app_id" content="" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta name="title" content="合利他命EX PLUS強效錠 輕鬆緩解重複發生的酸痛問題">
+    <meta name="description" content="台灣武田合利他命EX PLUS強效錠，日本製造原裝進口，內六大活化強效配方-活性TTFD誘導體能作用於神經與肌肉組織，每天輕鬆緩解痠痛。">
+    <meta property="og:title" content="合利他命EX PLUS強效錠 輕鬆緩解重複發生的酸痛問題">
+    <meta property="og:description" content="台灣武田合利他命EX PLUS強效錠，日本製造原裝進口，內六大活化強效配方-活性TTFD誘導體能作用於神經與肌肉組織，每天輕鬆緩解痠痛。">
+    <meta property="og:site_name" content="合利他命EX PLUS強效錠">
+    <meta property="og:image" content="http://www.alinamin-explus.tw/images/fb_url_images_1200x630.jpg">
+    <meta property="og:url" content="http://www.alinamin-explus.tw">
+
     <!-- css start-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
@@ -37,22 +38,20 @@
     <link rel="stylesheet" href="css/indexPage.css">
 
     <!-- js start-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-
-
-    <!-- Include the Swiper library -->
+    <script type="text/javascript" src="js/lib/jquery.waitforimages.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
     <script src="js/lib/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
-    <!-- Swiper JS Vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue-awesome-swiper@3.1.2/dist/vue-awesome-swiper.js"></script>
+    <script src="js/lib/TweenMax.min.js"></script>
+    <script src="js/lib/jquery.paroller.min.js"></script>
+
     <script type="text/javascript">
         Vue.use(window.VueAwesomeSwiper)
         Vue.use(VueScrollTo, {
@@ -70,6 +69,14 @@
 
 <body>
     <div id="app">
+        <transition name="fade" v-if='!isLoaded'>
+            <div id="loading">
+                <div class="pic">
+                    <img src="images/loading.gif" alt="">
+                    <h2 class="wTxt ta_c">loading</h2>
+                </div>
+            </div>
+        </transition>
         <div id="header">
             <div class="innerContainer">
                 <a href="https://archung.github.io/alinamin_index/" class="logo"></a>
@@ -101,15 +108,15 @@
                 <div class="logo"></div>
                 <div class="menuWrap">
                     <div class="menuBox">
-                        <a  href="#" v-scroll-to="{el: '#sticky-point',offset: -150}" @click='showPhoneMenu=false;'>甩不掉的酸痛問題</a>
-                        <a  href="#" v-scroll-to="{el: '.productPage',offset: 0}" @click='showPhoneMenu=false;'>了解EX
+                        <a href="#" v-scroll-to="{el: '#sticky-point',offset: -150}" @click='showPhoneMenu=false;'>甩不掉的酸痛問題</a>
+                        <a href="#" v-scroll-to="{el: '.productPage',offset: 0}" @click='showPhoneMenu=false;'>了解EX
                             PLUS強效錠</a>
-                        <a  href="#" v-scroll-to="{el: '.storePage',offset: 0}" @click='showPhoneMenu=false;'>哪裡買?</a>
-                        <a  href="#" v-scroll-to="{el: '.qa',offset: 0}" @click='showPhoneMenu=false;'>Q&A</a>
+                        <a href="#" v-scroll-to="{el: '.storePage',offset: 0}" @click='showPhoneMenu=false;'>哪裡買?</a>
+                        <a href="#" v-scroll-to="{el: '.qa',offset: 0}" @click='showPhoneMenu=false;'>Q&A</a>
                     </div>
                     <div class="menuBox light">
-                        <a class="" href="#"  @click='showPhoneMenu=false;'>EX PLUS強效錠</a>
-                        <a class="" href="#"  @click='showPhoneMenu=false;'>醫療級B群A25</a>
+                        <a class="" href="#" @click='showPhoneMenu=false;'>EX PLUS強效錠</a>
+                        <a class="" href="#" @click='showPhoneMenu=false;'>醫療級B群A25</a>
                     </div>
                 </div>
             </div>
@@ -121,26 +128,26 @@
                 <div class="indexWrap red">
                     <div class="innerContainer ">
                         <div class="scaleWrap">
-                        <div class="man"></div>
-                        <div class="titleBox">
-                            <div class="t1"></div>
-                            <div class="t2"></div>
-                            <div class="t3"></div>
+                            <div class="man ani_items" id='ani_man'></div>
+                            <div class="titleBox">
+                                <div class="t1 ani_items ani_t" ></div>
+                                <div class="t2 ani_items ani_t" ></div>
+                                <div class="t3 ani_items ani_t" ></div>
+                            </div>
+                            <div class="balls ani_items" id='ani_balls'></div>
                         </div>
-                        <div class="balls"></div>
-                    </div>
                     </div>
                 </div>
 
             </section>
-            
+
             <section id="sick" class="page">
                 <div class=" idw2">
                     <div class="yellow"></div>
                     <div class="innerContainer ">
                         <div class="proBox">
-                            <div class="txt"></div>
-                            <div class="pro"></div>
+                            <div class="txt ani_items" id='ani_proTxt'></div>
+                            <div class="pro ani_items" id='ani_pro'></div>
                         </div>
                         <div class="videoBtn picBtn phoneHide" @click='videoPop=true'>
                             <div class="pic"></div>
@@ -295,45 +302,48 @@
             <div id="page-point2" class='page-point' data-point='2'></div>
             <section class="productPage">
                 <div class="ballBgWrap">
-                    <div class="bg1" style='background-image: url("images/redBall_01.png");'></div>
-                    <div class="bg2" style='background-image: url("images/redBall_02.png");'></div>
-                    <div class="bg3" style='background-image: url("images/redBall_03.png");'></div>
+                    <div class="bg1 my-paroller" data-paroller-factor="0.1"  data-paroller-direction="vertical" style='background-image: url("images/redBall_01.png");'></div>
+                    <div class="bg2 my-paroller" data-paroller-factor="0.2"  data-paroller-direction="vertical" style='background-image: url("images/redBall_02.png");'></div>
+                    <div class="bg3 my-paroller" data-paroller-factor="0.3"  data-paroller-direction="vertical" style='background-image: url("images/redBall_03.png");'></div>
                 </div>
                 <div class="innerContainer">
                     <div class="scaleWrap">
-                    <div class="proBox">
-                        <div class="pro"></div>
-                        <div class="t1"></div>
-                    </div>
-                    <div class="infoBox">
-                        <div class="proInfo"></div>
-                        <!-- <div class="info1 info"></div>
+                        <div class="proBox">
+                            <div class="pro"></div>
+                            <div class="t1"></div>
+                        </div>
+                        <div class="infoBox">
+                            <div class="t3"></div>
+                            <div class="picWrap">
+                                <img src="images/ex_index_l1.png" alt="">
+                            </div>
+                            <!-- <div class="info1 info"></div>
                         <div class="info2 info"></div>
                         <div class="info3 info"></div>
                         <div class="info4 info"></div>
                         <div class="info5 info"></div> -->
+                        </div>
                     </div>
-                </div>
                 </div>
             </section>
             <section class="ttedVbg" class='' data-vide-bg="video/bg" data-vide-options="position: 50% 50%">
             </section>
             <section class="ttedPage yellowBg">
                 <div class="ballBgWrap">
-                    <div class="bg1" style='background-image: url("images/yellowBall_01.png");'></div>
-                    <div class="bg2" style='background-image: url("images/yellowBall_02.png");'></div>
-                    <div class="bg3" style='background-image: url("images/yellowBall_03.png");'></div>
+                    <div class="bg1 my-paroller" data-paroller-factor="0.1"  data-paroller-direction="vertical" style='background-image: url("images/yellowBall_01.png");'></div>
+                    <div class="bg2 my-paroller" data-paroller-factor="0.2"  data-paroller-direction="vertical" style='background-image: url("images/yellowBall_02.png");'></div>
+                    <div class="bg3 my-paroller" data-paroller-factor="0.3"  data-paroller-direction="vertical" style='background-image: url("images/yellowBall_03.png");'></div>
                 </div>
                 <div class="innerContainer">
                     <div class="tpBox picRight">
                         <div class="txt">
                             <!-- <h1 class='whiteUnderLine mb_b'>神奇的活性TTFD誘導體</h1> -->
                             <h2><span class="boldTxt">合利他命強效錠</span>能作用在人體的神經與肌肉組織，輕鬆舒緩「眼睛疲勞」、「肩頸僵硬」、 「腰背酸痛」症狀，非常有效。
-                                </h2>
+                            </h2>
                         </div>
                         <div class="pic">
                             <img src="images/TTFD.gif" alt="">
-                            <div class="f9 ta_r">衛署藥輸字第025431號 北市衛藥廣字第107080309號</div>
+                            <div class="f9 ta_r">衛署藥輸字第025431號 北市衛藥廣字第107080340號</div>
                         </div>
                     </div>
                 </div>
@@ -355,11 +365,11 @@
                     </div>
                     <div class="txtBox mt_70">
                         <div class="lineTxt">
-                            <h1 class="txt">用量用法</h1>
+                            <h1 class="txt">用法用量</h1>
                         </div>
                         <h2 class='mt_s'>15歲以上，1次2-3錠，一日一次。 </h2>
                     </div>
-                    <h3 class='mt-5'>衛署藥輸字第025431號 北市衛藥廣字第107080309號</h3>
+                    <h3 class='mt-5'>衛署藥輸字第025431號 北市衛藥廣字第107080340號</h3>
                 </div>
             </section>
             <div id="page-point3" class='page-point' data-point='3'></div>
@@ -378,17 +388,17 @@
                         </div>
                         <transition name="fadeUp">
                             <div class="pycialStores" v-if='storeData.storeChannel==1'>
-                                <div class="swiperWrap"  id='pycialStores-wrap'>
+                                <div class="swiperWrap" id='pycialStores-wrap'>
                                     <swiper :options="storeData.swiperOption" id='pycialStores-swiper' class='mt-5 pb-5'>
                                         <swiper-slide v-for='(store,index) in storeData.pycialStores' :key='index'>
-                                            
+
                                             <div class="card my-3">
                                                 <a :href="store.url" target='_blank'>
-                                                <img :src="store.img" class="card-img-top">
-                                                <div class="card-body">
-                                                    <h2 class="card-title font-weight-bold">{{ store.name }}</h2>
-                                                </div>
-                                            </a>
+                                                    <img :src="store.img" class="card-img-top">
+                                                    <div class="card-body">
+                                                        <h2 class="card-title font-weight-bold">{{ store.name }}</h2>
+                                                    </div>
+                                                </a>
                                             </div>
                                         </swiper-slide>
 
@@ -501,17 +511,101 @@
                 <div class="pageNav" :class='{"active": posIndex==2}' v-scroll-to="{el: '.productPage',offset: 0}"></div>
                 <div class="pageNav" :class='{"active": posIndex==3 }' v-scroll-to="{el: '.storePage',offset: 0}"></div>
                 <div class="pageNav" :class='{"active": posIndex==4}' v-scroll-to="{el: '.qa',offset: 0}"></div>
-                
-                    
+
+
             </div>
+        </div>
+        <div class="loadingFirst" style='display: none;'>
+            <img src="images/bg_y.jpg" alt="">
+            <img src="images/circleArrRight.png" alt="">
+            <img src="images/circleArrUp.png" alt="">
+            <img src="images/d_arr.png" alt="">
+            <img src="images/ex_bg.jpg" alt="">
+            <img src="images/ex_index_l1.png" alt="">
+            <img src="images/ex_index_m.png" alt="">
+            <img src="images/ex_index_m1.png" alt="">
+            <img src="images/ex_index_t1.png" alt="">
+            <img src="images/ex_index_t2.png" alt="">
+            <img src="images/ex_index_t3.png" alt="">
+            <img src="images/ex_index_tag.png" alt="">
+            <img src="images/ex_pic01.png" alt="">
+            <img src="images/ex_pic02.png" alt="">
+            <img src="images/ex_t1.png" alt="">
+            <img src="images/fb_url_images_1200x630.jpg" alt="">
+            <img src="images/index_banner01.png" alt="">
+            <img src="images/info.png" alt="">
+            <img src="images/info01.png" alt="">
+            <img src="images/info02.png" alt="">
+            <img src="images/info03.png" alt="">
+            <img src="images/info04.png" alt="">
+            <img src="images/info05.png" alt="">
+            <img src="images/infoTable.png" alt="">
+            <img src="images/infoTitle.png" alt="">
+            <img src="images/loading.gif" alt="">
+            <img src="images/logo.png" alt="">
+            <img src="images/logo_ch.png" alt="">
+            <img src="images/m00.png" alt="">
+            <img src="images/m01.png" alt="">
+            <img src="images/m02.png" alt="">
+            <img src="images/m03.png" alt="">
+            <img src="images/m04.png" alt="">
+            <img src="images/m05.png" alt="">
+            <img src="images/m06.png" alt="">
+            <img src="images/m07.png" alt="">
+            <img src="images/m08.png" alt="">
+            <img src="images/m09.png" alt="">
+            <img src="images/m10.png" alt="">
+            <img src="images/m11.png" alt="">
+            <img src="images/m12.png" alt="">
+            <img src="images/m13.png" alt="">
+            <img src="images/m14.png" alt="">
+            <img src="images/m15.png" alt="">
+            <img src="images/manBg.png" alt="">
+            <img src="images/m_cloz.png" alt="">
+            <img src="images/m_ex_index_l1.png" alt="">
+            <img src="images/m_infoTable.png" alt="">
+            <img src="images/m_logo_ch.png" alt="">
+            <img src="images/m_menuBtn.png" alt="">
+            <img src="images/m_sqArr_right.png" alt="">
+            <img src="images/playBtn.png" alt="">
+            <img src="images/pro.png" alt="">
+            <img src="images/proTitle.png" alt="">
+            <img src="images/pro_b.png" alt="">
+            <img src="images/qaTxt.png" alt="">
+            <img src="images/redArr_d" alt="">
+            <img src="images/redArr_d.png" alt="">
+            <img src="images/redBall.png" alt="">
+            <img src="images/redBall_01.png" alt="">
+            <img src="images/redBall_02.png" alt="">
+            <img src="images/redBall_03.png" alt="">
+            <img src="images/s1_1.jpg" alt="">
+            <img src="images/s1_2.jpg" alt="">
+            <img src="images/s2_1.jpg" alt="">
+            <img src="images/s2_2.jpg" alt="">
+            <img src="images/s3_1.jpg" alt="">
+            <img src="images/s3_2.jpg" alt="">
+            <img src="images/sick.gif" alt="">
+            <img src="images/sickPic01.png" alt="">
+            <img src="images/sickPic02.png" alt="">
+            <img src="images/sickPic03.png" alt="">
+            <img src="images/sickTxt01.png" alt="">
+            <img src="images/sickTxt02.png" alt="">
+            <img src="images/sickTxt03.png" alt="">
+            <img src="images/sqArr_left.png" alt="">
+            <img src="images/sqArr_right.png" alt="">
+            <img src="images/t2.png" alt="">
+            <img src="images/ttedBg.png" alt="">
+            <img src="images/TTFD.gif" alt="">
+            <img src="images/videoBg.png" alt="">
+            <img src="images/yellowArrBg.png" alt="">
+            <img src="images/yellowBall.png" alt="">
+            <img src="images/yellowBall_01.png" alt="">
+            <img src="images/yellowBall_02.png" alt="">
+            <img src="images/yellowBall_03.png" alt="">
         </div>
     </div>
 
     <script type="text/javascript" src="js/index.js"></script>
-    <!-- <script src="js/lib/skrollr.js"></script>
-    <script type="text/javascript">
-        var s = skrollr.init();
-    </script> -->
 </body>
 
 </html>
