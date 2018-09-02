@@ -49,8 +49,10 @@
     <script src="js/lib/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue-awesome-swiper@3.1.2/dist/vue-awesome-swiper.js"></script>
+    <script src="https://unpkg.com/vue-is-in-view" type="text/javascript"></script>
     <script src="js/lib/TweenMax.min.js"></script>
     <script src="js/lib/jquery.paroller.min.js"></script>
+
 
     <script type="text/javascript">
         Vue.use(window.VueAwesomeSwiper)
@@ -58,6 +60,7 @@
             duration: 1000,
             easing: "ease",
         })
+        Vue.use(VueIsInView.default);
     </script>
 
     <!-- archung js -->
@@ -127,13 +130,14 @@
             <section id="index" class="page">
                 <div class="indexWrap red">
                     <div class="innerContainer ">
+                            <div class="titleBox">
+                                    <div class="t1 ani_items ani_t"></div>
+                                    <div class="t2 ani_items ani_t"></div>
+                                    <div class="t3 ani_items ani_t"></div>
+                                </div>
                         <div class="scaleWrap">
                             <div class="man ani_items" id='ani_man'></div>
-                            <div class="titleBox">
-                                <div class="t1 ani_items ani_t" ></div>
-                                <div class="t2 ani_items ani_t" ></div>
-                                <div class="t3 ani_items ani_t" ></div>
-                            </div>
+                            
                             <div class="balls ani_items" id='ani_balls'></div>
                         </div>
                     </div>
@@ -295,24 +299,26 @@
             <section class="manWrapPage">
                 <div class="arrTop"></div>
                 <div class="innerContainer">
-                    <div class="talkPop"></div>
+                    <div class="fadeIn-onScroll fadeUp" data-offset='-800'>
+                        <div class="talkPop"></div>
+                    </div>
                     <div class="man"></div>
                 </div>
             </section>
             <div id="page-point2" class='page-point' data-point='2'></div>
             <section class="productPage">
                 <div class="ballBgWrap">
-                    <div class="bg1 my-paroller" data-paroller-factor="0.1"  data-paroller-direction="vertical" style='background-image: url("images/redBall_01.png");'></div>
-                    <div class="bg2 my-paroller" data-paroller-factor="0.2"  data-paroller-direction="vertical" style='background-image: url("images/redBall_02.png");'></div>
-                    <div class="bg3 my-paroller" data-paroller-factor="0.3"  data-paroller-direction="vertical" style='background-image: url("images/redBall_03.png");'></div>
+                    <div class="bg1 my-paroller" data-paroller-factor="0.1" data-paroller-direction="vertical" style='background-image: url("images/redBall_01.png");'></div>
+                    <div class="bg2 my-paroller" data-paroller-factor="0.2" data-paroller-direction="vertical" style='background-image: url("images/redBall_02.png");'></div>
+                    <div class="bg3 my-paroller" data-paroller-factor="0.3" data-paroller-direction="vertical" style='background-image: url("images/redBall_03.png");'></div>
                 </div>
                 <div class="innerContainer">
                     <div class="scaleWrap">
-                        <div class="proBox">
+                        <div class="proBox fadeIn-onScroll fadeUp" >
                             <div class="pro"></div>
                             <div class="t1"></div>
                         </div>
-                        <div class="infoBox">
+                        <div class="infoBox fadeIn-onScroll fadeUp">
                             <div class="t3"></div>
                             <div class="picWrap">
                                 <img src="images/ex_index_l1.png" alt="">
@@ -330,9 +336,9 @@
             </section>
             <section class="ttedPage yellowBg">
                 <div class="ballBgWrap">
-                    <div class="bg1 my-paroller" data-paroller-factor="0.1"  data-paroller-direction="vertical" style='background-image: url("images/yellowBall_01.png");'></div>
-                    <div class="bg2 my-paroller" data-paroller-factor="0.2"  data-paroller-direction="vertical" style='background-image: url("images/yellowBall_02.png");'></div>
-                    <div class="bg3 my-paroller" data-paroller-factor="0.3"  data-paroller-direction="vertical" style='background-image: url("images/yellowBall_03.png");'></div>
+                    <div class="bg1 my-paroller" data-paroller-factor="0.1" data-paroller-direction="vertical" style='background-image: url("images/yellowBall_01.png");'></div>
+                    <div class="bg2 my-paroller" data-paroller-factor="0.2" data-paroller-direction="vertical" style='background-image: url("images/yellowBall_02.png");'></div>
+                    <div class="bg3 my-paroller" data-paroller-factor="0.3" data-paroller-direction="vertical" style='background-image: url("images/yellowBall_03.png");'></div>
                 </div>
                 <div class="innerContainer">
                     <div class="tpBox picRight">

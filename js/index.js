@@ -5,6 +5,10 @@ var app = new Vue({
         sickChannel: 1,
         showPhoneMenu: false,
         isPhone: false,
+        showConfig: {
+            talkPop: false,
+            proBox: false,
+        },
         storeData: {
             swiperOption: {
                 slidesPerView: 3,
@@ -247,7 +251,18 @@ var app = new Vue({
                 posIndex = (pos + 500 > 0 )? index + 1 : posIndex;
             });
             that.posIndex = posIndex;
-        }, 10)
+
+
+            $('.fadeIn-onScroll').each(function(index,el){
+                var offset = $(el).attr('data-offset')
+                offset = offset||-500
+                if(top - $(el).offset().top > offset){
+                    $(this).addClass('active')
+                }
+            })
+
+            
+        }, 100)
 
         
         //load
@@ -263,6 +278,7 @@ var app = new Vue({
         }); 
 
         $('.my-paroller').paroller();
+
     },
     methods: {
         limitRange(num, min, max) {
@@ -278,7 +294,11 @@ var app = new Vue({
             .fromTo('#ani_balls',.6,{marginTop:0},{marginTop:-30,autoAlpha:1},'-=1.2')
             .fromTo('#ani_pro',1,{marginLeft:200},{marginLeft:0,autoAlpha:1},'-=.8')
             .fromTo('#ani_proTxt',.6,{marginLeft:-50},{marginLeft:0,autoAlpha:1},'-=.6')
-        }
+        },
+        runAnime(){
+            console.log(456);
+        },
+        
     }
 
 })

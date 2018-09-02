@@ -3572,16 +3572,20 @@ h2 {
 }
 #index .titleBox {
   position: absolute;
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  left: 50%;
-  margin-left: -462px;
   top: 189px;
+  left: 50px;
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 @media screen and (max-width: 1024px) {
   #index .titleBox {
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    left: 50%;
     margin-left: -313px;
     top: 255px;
     -moz-transform: translateX(-50%) scale(0.7);
@@ -3909,7 +3913,7 @@ h2 {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   left: 50%;
-  bottom: 646px;
+  top: -355px;
   width: 427px;
   height: 277px;
   background-image: url("../images/ex_pic01.png");
@@ -4366,6 +4370,22 @@ h2 {
 }
 #loading img {
   display: block;
+}
+
+.fadeIn-onScroll.fadeUp {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  position: relative;
+  top: 50px;
+  -moz-transition: all, 0.8s;
+  -o-transition: all, 0.8s;
+  -webkit-transition: all, 0.8s;
+  transition: all, 0.8s;
+}
+.fadeIn-onScroll.active {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  top: 0;
 }
 
 .padShow {
