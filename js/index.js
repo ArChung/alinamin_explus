@@ -135,6 +135,7 @@ var app = new Vue({
             storeCity2: '',
             citiSelectedIndex: 0,
         },
+        gaArr: [],
         qaData: {
             activeIndex: 1,
             qas: [{
@@ -207,10 +208,13 @@ var app = new Vue({
         }
     },
     watch: {
-        // posIndex(val){
-        //     console.log('posIndex' + val);
-        //     $('.pageNavWrap .pageNav').eq(val-1).addClass('active').
-        // }
+        posIndex(val){
+            if(this.gaArr.indexOf(val)==-1){
+                this.gaArr.push(val);
+                ga('send', 'pageview', '/event/section'+ val);
+                console.log('ga:' + val);
+            }
+        }
     },
     mounted() {
         this.isPhone = ChungTool.isPhone();
