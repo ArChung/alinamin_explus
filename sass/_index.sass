@@ -28,6 +28,14 @@ h2
 .f40
 	+phone 
 		font-size: 50px
++keyframes(redBtn)
+	0%
+		background-color: #d5000e
+	50%
+		background-color: darken(#d5000e,4)
+	100%
+		background-color: #d5000e
+
 .redBtn
 	width: 320px
 	height: 60px	
@@ -42,6 +50,7 @@ h2
 	vertical-align: text-top
 	margin: 0 auto
 	cursor: pointer
+	+animation(1s redBtn infinite linear)
 	+dTime
 	&:hover
 		background-color: darken(#d5000e,4)

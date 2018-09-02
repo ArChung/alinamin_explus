@@ -3293,6 +3293,39 @@ h2 {
   }
 }
 
+@-moz-keyframes redBtn {
+  0% {
+    background-color: #d5000e;
+  }
+  50% {
+    background-color: #c1000d;
+  }
+  100% {
+    background-color: #d5000e;
+  }
+}
+@-webkit-keyframes redBtn {
+  0% {
+    background-color: #d5000e;
+  }
+  50% {
+    background-color: #c1000d;
+  }
+  100% {
+    background-color: #d5000e;
+  }
+}
+@keyframes redBtn {
+  0% {
+    background-color: #d5000e;
+  }
+  50% {
+    background-color: #c1000d;
+  }
+  100% {
+    background-color: #d5000e;
+  }
+}
 .redBtn {
   width: 320px;
   height: 60px;
@@ -3307,6 +3340,9 @@ h2 {
   vertical-align: text-top;
   margin: 0 auto;
   cursor: pointer;
+  -moz-animation: 1s redBtn infinite linear;
+  -webkit-animation: 1s redBtn infinite linear;
+  animation: 1s redBtn infinite linear;
   -moz-transition: all, 0.3s;
   -o-transition: all, 0.3s;
   -webkit-transition: all, 0.3s;
