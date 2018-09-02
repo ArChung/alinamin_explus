@@ -3928,6 +3928,7 @@ h2 {
   background-position: 50% 50%;
   background-image: url("../images/bg_y.jpg");
   position: relative;
+  margin-top: -2px;
 }
 .manWrapPage .arrTop {
   width: 100%;
@@ -3997,6 +3998,7 @@ h2 {
   padding: 100px 0px;
   position: relative;
   padding-top: 200px;
+  margin-top: -2px;
 }
 @media screen and (max-width: 1200px) {
   .productPage {
