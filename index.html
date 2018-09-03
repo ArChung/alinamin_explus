@@ -82,7 +82,20 @@
     <script type="text/javascript" src="js/ChungTool.js"></script>
     <script type="text/javascript" src="js/lib/jquery.vide.min.js"></script>
 
+    <style>
+        #svg-container {
+    width: 100%;
+    height: 100%;
+}
 
+#image-wrapper { position: relative; }
+.svg-background, .svg-image { clip-path: url(#clip-triangle); }
+.svg-image {
+   
+}
+
+svg.clip-svg { height: 250px; position: absolute; width: 250px; }
+#svg-1 { left: 0px; top: 0px; }</style>
 </head>
 
 <body>
@@ -298,6 +311,24 @@
             </section>
             <section class="title2 ">
                 <div class="yellowSlipBg"></div>
+                <!-- <div id="svg-container">
+                    <svg width='100%' height='100%' viewBox="0 0 100 100" preserveAspectRatio="none" style='background-color: whitesmoke'>                        
+                        <polygon points="0 0,100 10,100 100,0 90" />
+                    </svg>
+                </div> -->
+                <!-- <div id="image-wrapper" viewBox="0 0 100 100" preserveAspectRatio="none" style="width: 100%;height: 100%;">
+                    <svg id="svg-1" class="clip-svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="width: 100%;height: 100%;">
+                        <rect class='svg-background' width="300" height="300" fill="#ffffff" />
+                        <image id="img-1" class='svg-image'  xlink:href="images/bg_y.jpg" />
+                    </svg>
+                </div>
+                <svg id="svg-defs" viewBox="0 0 100 100" preserveAspectRatio="none" style="width: 100%;height: 100%;">
+                    <defs>
+                        <clipPath id="clip-triangle" >
+                            <polygon points="0 0,100 10,100 100,0 90" />
+                        </clipPath>
+                    </defs>
+                </svg> -->
                 <div class="innerContainer">
                     <div class="t2 fadeIn-onScroll fadeUp" data-offset='-800'></div>
                 </div>

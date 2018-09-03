@@ -197,29 +197,25 @@ var app = new Vue({
 
     },
     computed: {
-        citiSelect2() {
-            var index = this.storeData.citi1Arr.indexOf(this.storeData.storeCity1);
 
+        citiSelect2: function () {
+            var index = this.storeData.citi1Arr.indexOf(this.storeData.storeCity1);
             return (index == -1) ? [] : this.storeData.citiArr2[index];
         },
-        showCitiArr() {
+        showCitiArr: function () {
             var arr = [];
-            var {
-                p_storeName,
-                p_storeArr,
-                p_storePhone,
-                storeCity1,
-                storeCity2
-            } = this.storeData;
-            if (storeCity1 == '' && storeCity2 == '') {
+            var data = this.storeData;
+           
+            if (data.storeCity1 == '' && data.storeCity2 == '') {
                 return arr
             }
-            p_storeArr.forEach((el, index) => {
-                if (el.indexOf(storeCity1) != -1 && el.indexOf(storeCity2) != -1) {
+
+            $.each(data.p_storeArr, function (index, el) {
+                if (el.indexOf(data.storeCity1) != -1 && el.indexOf(data.storeCity2) != -1) {
                     arr.push({
-                        name: p_storeName[index],
+                        name: data.p_storeName[index],
                         addr: el,
-                        phone: p_storePhone[index]
+                        phone: data.p_storePhone[index]
                     })
                 }
             });
@@ -227,7 +223,7 @@ var app = new Vue({
         }
     },
     watch: {
-        posIndex(val) {
+        posIndex: function (val) {
             if (this.gaArr.indexOf(val) == -1) {
                 this.gaArr.push(val);
                 ga('send', 'pageview', '/event/section' + val);
@@ -235,7 +231,7 @@ var app = new Vue({
             }
         }
     },
-    mounted() {
+    mounted: function () {
         this.isPhone = ChungTool.isPhone();
         console.log('ChungTool.isPhone(): ', ChungTool.isPhone());
         var that = this;
@@ -306,10 +302,10 @@ var app = new Vue({
         $('.sickMenu .sBtn').eq(sickIndex).trigger('click');
     },
     methods: {
-        limitRange(num, min, max) {
+        limitRange: function (num, min, max) {
             return Math.max(Math.min(num, max), min)
         },
-        playAni() {
+        playAni: function () {
 
             var tl = new TimelineMax({
                 delay: .3
@@ -350,10 +346,10 @@ var app = new Vue({
                     autoAlpha: 1
                 }, '-=.6')
         },
-        runAnime() {
+        runAnime: function () {
             console.log(456);
         },
-        getUrlParameter(sParam) {
+        getUrlParameter: function (sParam) {
             var sPageURL = decodeURIComponent(window.location.search.substring(1)),
                 sURLVariables = sPageURL.split("&"),
                 sParameterName,
