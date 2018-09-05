@@ -174,8 +174,8 @@ svg.clip-svg { height: 250px; position: absolute; width: 250px; }
             </section>
 
             <section id="sick" class="page">
-                <div class=" idw2">
-                    <div class="yellow"></div>
+                <div class=" idw2 yellowSlipBg">
+                    <!-- <div class="yellow"></div> -->
                     <div class="innerContainer ">
                         <div class="proBox">
                             <div class="txt ani_items" id='ani_proTxt'></div>
@@ -309,29 +309,13 @@ svg.clip-svg { height: 250px; position: absolute; width: 250px; }
                     </div>
                 </div>
             </section>
-            <section class="title2 ">
-                <div class="yellowSlipBg"></div>
-                <!-- <div id="svg-container">
-                    <svg width='100%' height='100%' viewBox="0 0 100 100" preserveAspectRatio="none" style='background-color: whitesmoke'>                        
-                        <polygon points="0 0,100 10,100 100,0 90" />
-                    </svg>
-                </div> -->
-                <!-- <div id="image-wrapper" viewBox="0 0 100 100" preserveAspectRatio="none" style="width: 100%;height: 100%;">
-                    <svg id="svg-1" class="clip-svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="width: 100%;height: 100%;">
-                        <rect class='svg-background' width="300" height="300" fill="#ffffff" />
-                        <image id="img-1" class='svg-image'  xlink:href="images/bg_y.jpg" />
-                    </svg>
-                </div>
-                <svg id="svg-defs" viewBox="0 0 100 100" preserveAspectRatio="none" style="width: 100%;height: 100%;">
-                    <defs>
-                        <clipPath id="clip-triangle" >
-                            <polygon points="0 0,100 10,100 100,0 90" />
-                        </clipPath>
-                    </defs>
-                </svg> -->
-                <div class="innerContainer">
+            <section class="title2">
+                <!-- <div class="yellowSlipBg"></div> -->
+                <div class="yellowSlipBg">
+                <div class="innerContainer ">
                     <div class="t2 fadeIn-onScroll fadeUp" data-offset='-800'></div>
                 </div>
+            </div>
             </section>
             <section class="sickgif">
                 <div class="innerContainer fadeIn-onScroll fadeUp">
@@ -343,7 +327,6 @@ svg.clip-svg { height: 250px; position: absolute; width: 250px; }
                 </div>
             </section>
             <section class="manWrapPage">
-                <div class="arrTop"></div>
                 <div class="innerContainer">
                     <div class="fadeIn-onScroll fadeUp" data-offset='-800'>
                         <div class="talkPop"></div>
@@ -435,7 +418,7 @@ svg.clip-svg { height: 250px; position: absolute; width: 250px; }
                                 <h2>連鎖通路</h2>
                             </div>
                             <div class="btn py-3 px-3" :class='{active:storeData.storeChannel==2}' @click='storeData.storeChannel=2'>
-                                <h2>其他通路</h2>
+                                <h2>藥局通路</h2>
                             </div>
                         </div>
                         <transition name="fadeUp">

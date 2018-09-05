@@ -49,7 +49,7 @@ var app = new Vue({
                 }
             },
             pycialStores: [{
-                    name: 'Watson',
+                    name: 'Watsons',
                     img: './images/m01.png',
                     url: 'https://www.watsons.com.tw/store-finder'
                 },
@@ -179,7 +179,7 @@ var app = new Vue({
                 q: "服用多久才有效?",
                 a: "服用效果依個人體質及吸收能力而有效果，建議持續服用一個月，若情況未有改善，建議徵詢醫師意見，進一步了解酸痛背後原因。"
             }, {
-                q: "在用蒜嗎？",
+                q: "產品含大蒜成分嗎? ",
                 a: "合利他命EX PLUS強效錠不含大蒜成份所使用的Fursultiamine(維生素B1誘導體)，其特殊氣味與大蒜相似，導致部分消費者誤以為含有大蒜成份。"
             }, {
                 q: "適合什麼年齡服用?",

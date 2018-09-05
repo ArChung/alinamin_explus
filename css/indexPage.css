@@ -3326,6 +3326,37 @@ h2 {
     background-color: #d5000e;
   }
 }
+.yellowSlipBg {
+  background-color: #ffd400;
+  position: relative;
+}
+.yellowSlipBg:after {
+  content: "";
+  position: absolute;
+  top: -170px;
+  left: 0;
+  width: 100%;
+  height: 170px;
+  background-size: 100% 100%;
+  background-image: url("../images/bg_ys_top.png");
+  z-index: -1;
+}
+.yellowSlipBg:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 170px;
+  background-size: 100% 100%;
+  background-image: url("../images/bg_ys_top.png");
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  z-index: -1;
+}
+
 .redBtn {
   width: 320px;
   height: 60px;
@@ -3585,6 +3616,12 @@ h2 {
   position: absolute;
   bottom: 0;
   margin-left: 50px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1024px) {
+  #index .man {
+    margin-bottom: 0;
+  }
 }
 #index .balls {
   position: absolute;
@@ -3653,12 +3690,15 @@ h2 {
   background-image: url("../images/ex_index_t3.png");
 }
 
+#sick {
+  padding-bottom: 170px;
+}
 #sick .innerContainer {
   padding-top: 180px;
 }
 @media screen and (max-width: 768px) {
   #sick .innerContainer {
-    padding-top: 200px;
+    padding-top: 100px;
   }
 }
 #sick .videoWrap {
@@ -3689,44 +3729,28 @@ h2 {
   position: absolute;
 }
 #sick .idw2 {
-  height: 544px;
+  height: 307px;
   position: absolute;
-  margin-top: -7vw;
   top: 0;
   left: 0;
   width: 100%;
 }
 @media screen and (max-width: 768px) {
   #sick .idw2 {
-    height: 1000px;
+    height: 800px;
+  }
+  #sick .idw2:before {
+    display: none;
   }
 }
 #sick .idw2 .se_num {
   position: absolute;
   right: 266px;
-  top: 110px;
-}
-#sick .idw2 .yellow {
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-image: url("../images/bg_y.jpg");
-  -webkit-clip-path: polygon(0 0, 100% calc( 7vw), 100% 100%, 0 calc(100% - 7vw));
-  clip-path: polygon(0 0, 100% calc( 7vw), 100% 100%, 0 calc(100% - 7vw));
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  width: 100%;
+  top: -10px;
 }
 #sick .proBox {
   position: absolute;
-  top: -150px;
+  top: -270px;
 }
 #sick .proBox .txt {
   width: 376px;
@@ -3747,7 +3771,7 @@ h2 {
   height: 128px;
   position: absolute;
   right: 50px;
-  top: 0;
+  top: -120px;
   border: 2px solid white;
   border-radius: 5px;
   background-color: white;
@@ -3879,24 +3903,10 @@ h2 {
 }
 
 .title2 {
-  padding-top: 50px;
-  height: 400px;
-  margin-top: -2px;
-}
-.title2 .yellowSlipBg {
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-image: url("../images/bg_y.jpg");
-  -webkit-clip-path: polygon(0 0, 100% calc( 7vw), 100% 100%, 0 calc(100% - 7vw));
-  clip-path: polygon(0 0, 100% calc( 7vw), 100% 100%, 0 calc(100% - 7vw));
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  padding: 170px 0;
+  margin-top: -172px;
+  z-index: 3;
+  background-color: transparent;
 }
 .title2 .innerContainer {
   display: flex;
@@ -3910,36 +3920,28 @@ h2 {
 }
 
 .sickgif {
-  padding-bottom: 400px;
-  margin-top: -2px;
-  padding-top: 15px;
+  margin-top: -172px;
+  padding: 200px 0 60px;
+  background-color: #dcdcdc;
 }
 .sickgif .innerContainer {
   max-width: 780px;
 }
-.sickgif .imgWrap {
-  border-bottom: 2px solid #f9d83e;
-  padding-bottom: 50px;
-}
 
 .manWrapPage {
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-image: url("../images/bg_y.jpg");
   position: relative;
   margin-top: -2px;
+  padding-top: 400px;
 }
-.manWrapPage .arrTop {
-  width: 100%;
-  height: 420px;
-  background-image: url("../images/manBg.png");
-  background-size: 100% 100%;
+.manWrapPage:before {
+  content: "";
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
+  width: 100%;
+  height: 595px;
+  background-size: 100% 100%;
+  background-image: url("../images/manBg2.png");
 }
 .manWrapPage .innerContainer {
   height: 600px;
@@ -3952,7 +3954,7 @@ h2 {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   left: 50%;
-  top: -355px;
+  top: -335px;
   width: 427px;
   height: 277px;
   background-image: url("../images/ex_pic01.png");

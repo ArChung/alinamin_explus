@@ -35,6 +35,33 @@ h2
 		background-color: darken(#d5000e,4)
 	100%
 		background-color: #d5000e
+.yellowSlipBg
+	// +bgi('bg_ys.png')
+	// background-size: 100% 100%
+	// z-index: 2
+	background-color: #ffd400
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		top: -170px
+		left: 0
+		width: 100%
+		height: 170px
+		background-size: 100% 100%
+		+bgi('bg_ys_top.png')
+		z-index: -1
+	&:before
+		content: ''
+		position: absolute
+		top: 100%
+		left: 0
+		width: 100%
+		height: 170px
+		background-size: 100% 100%
+		+bgi('bg_ys_top.png')
+		+rotate(180deg)
+		z-index: -1
 
 .redBtn
 	width: 320px
@@ -218,6 +245,11 @@ h2
 		position: absolute
 		bottom: 0 
 		margin-left: 50px
+		margin-bottom: 20px
+		+pad
+			margin-bottom: 0
+		// +pad 
+		// 	margin-top: 0
 	.balls
 		position: absolute
 		+bg('ex_index_m1.png')
@@ -254,10 +286,11 @@ h2
 		
 		
 #sick
+	padding-bottom: 170px
 	.innerContainer
 		padding-top: 180px
 		+phone
-			padding-top: 200px
+			padding-top: 100px
 	.videoWrap
 		+aspect-ratio(560,315)
 		border: 2px solid white
@@ -268,28 +301,24 @@ h2
 			position: absolute
 
 	.idw2
-		height: 544px
+		height: 307px
 		position: absolute
-		margin-top: -7vw
+		// margin-top: -170px 
 		top: 0
 		left: 0
 		width: 100%
 		+phone
-			height: 1000px
+			height: 800px
+			&:before
+				display: none
 		.se_num
 			position: absolute
 			right: 266px
-			top: 110px
-		.yellow
-			+coverBg
-			+bgi('bg_y.jpg')
-			+slip
-			position: absolute
-			top: 0
-			width: 100%
+			top: -10px
+		
 	.proBox
 		position: absolute
-		top: -150px
+		top: -270px
 		.txt
 			+bg('ex_index_tag.png')
 			position: absolute
@@ -303,7 +332,7 @@ h2
 		height: 128px
 		position: absolute
 		right: 50px
-		top: 0
+		top: -120px
 		border: 2px solid white
 		border-radius: 5px
 		background-color: white
@@ -374,13 +403,16 @@ h2
 					+phone
 						padding: 25px 0
 .title2
-	padding-top: 50px
-	height: 400px
-	margin-top: -2px
-	.yellowSlipBg
-		+coverBg
-		+bgi('bg_y.jpg')
-		+slip
+	// padding-top: 50px
+	padding: 170px 0
+	// height: 400px
+	margin-top: -172px 
+	z-index: 3
+	background-color: transparent
+	// .yellowSlipBg
+	// 	+coverBg
+	// 	+bgi('bg_y.jpg')
+	// 	+slip
 		
 	.innerContainer
 		display: flex
@@ -389,27 +421,28 @@ h2
 		.t2
 			+bg('t2.png')
 .sickgif
-	padding-bottom: 400px
-	margin-top: -2px
-	padding-top: 15px
+	margin-top: -172px
+	padding: 200px 0 60px
+
+	background-color: #dcdcdc
 	.innerContainer
 		max-width: 780px
-	.imgWrap
-		border-bottom: 2px solid $y
-		padding-bottom: 50px
+	// .imgWrap
+	// 	border-bottom: 2px solid $y
+	// 	padding-bottom: 50px
 .manWrapPage
-	+coverBg
-	+bgi('bg_y.jpg')
 	position: relative
 	margin-top: -2px
-	.arrTop
-		width: 100%
-		height: 420px
-		+bgi('manBg.png')
-		background-size: 100% 100%
+	padding-top: 400px
+	&:before
+		content: ''
 		position: absolute
-		top: 0	
-		left: 0 
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 595px
+		background-size: 100% 100%
+		+bgi('manBg2.png')
 
 	.innerContainer
 		height: 600px
@@ -417,7 +450,7 @@ h2
 		.talkPop
 			position: absolute
 			+centerX
-			top: -355px
+			top: -335px
 			+bg('ex_pic01.png')
 		.man
 			position: absolute
