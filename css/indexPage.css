@@ -3921,8 +3921,18 @@ h2 {
 
 .sickgif {
   margin-top: -172px;
-  padding: 200px 0 60px;
-  background-color: #dcdcdc;
+  padding: 200px 0 150px;
+  background-color: #d5d5d5;
+}
+.sickgif:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 93px;
+  background-color: #ffde03;
+  bottom: 0;
+  left: 0;
+  border-bottom: 10px solid #000;
 }
 .sickgif .innerContainer {
   max-width: 780px;
