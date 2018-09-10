@@ -3333,7 +3333,7 @@ h2 {
 .yellowSlipBg:after {
   content: "";
   position: absolute;
-  top: -170px;
+  top: -169px;
   left: 0;
   width: 100%;
   height: 170px;
