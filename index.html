@@ -203,15 +203,15 @@ svg.clip-svg { height: 250px; position: absolute; width: 250px; }
                     <div id="page-point2" data-point='sick'></div>
 
                     <div class="sickMenu fadeIn-onScroll fadeUp" data-offset='-800' id='sickMenu'>
-                        <div class="sBtn picBtn" v-scroll-to="{el: '#sticky-point',offset: -70}" @click='sickChannel=1'>
+                        <div class="sBtn picBtn" v-scroll-to="{el: '#sticky-point',offset: -70}" @click='switchSick(1)'>
                             <div class="pic" style="background-image: url('images/sickPic01.png');"></div>
                             <div class="pic2" style='background-image: url("images/sickTxt01.png");'></div>
                         </div>
-                        <div class="sBtn picBtn" v-scroll-to="{el: '#sticky-point',offset: -70}" @click='sickChannel=2'>
+                        <div class="sBtn picBtn" v-scroll-to="{el: '#sticky-point',offset: -70}" @click='switchSick(2)'>
                             <div class="pic" style="background-image: url('images/sickPic02.png');"></div>
                             <div class="pic2" style='background-image: url("images/sickTxt02.png");'></div>
                         </div>
-                        <div class="sBtn picBtn " v-scroll-to="{el: '#sticky-point',offset: -70}" @click='sickChannel=3'>
+                        <div class="sBtn picBtn " v-scroll-to="{el: '#sticky-point',offset: -70}" @click='switchSick(3)'>
                             <div class="pic" style="background-image: url('images/sickPic03.png');"></div>
                             <div class="pic2" style='background-image: url("images/sickTxt03.png");'></div>
                         </div>

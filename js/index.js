@@ -305,6 +305,11 @@ var app = new Vue({
         limitRange: function (num, min, max) {
             return Math.max(Math.min(num, max), min)
         },
+        switchSick(sid){
+            this.sickChannel = sid;
+            ga('send', 'click', '/sickBtn' + sid);
+            
+        },
         playAni: function () {
 
             var tl = new TimelineMax({
