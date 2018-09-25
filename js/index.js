@@ -233,9 +233,9 @@ var app = new Vue({
         videoPop: function(val){
             if(val){
                 console.log('open');
-                ga('send', 'click', 'openVideo');
+                ga('send', 'event', 'openVideo');
             }else{
-                ga('send', 'click', 'clozVideo');
+                ga('send', 'event', 'clozVideo');
             }
         }
     },
@@ -315,7 +315,7 @@ var app = new Vue({
         },
         switchSick(sid){
             this.sickChannel = sid;
-            ga('send', 'click', '/sickBtn' + sid);
+            ga('send', 'event', 'sickBtn'+ sid);
         },
         playAni: function () {
 
