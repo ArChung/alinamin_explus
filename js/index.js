@@ -229,6 +229,14 @@ var app = new Vue({
                 ga('send', 'pageview', '/event/section' + val);
                 console.log('ga:' + val);
             }
+        },
+        videoPop: function(val){
+            if(val){
+                console.log('open');
+                ga('send', 'click', 'openVideo');
+            }else{
+                ga('send', 'click', 'clozVideo');
+            }
         }
     },
     mounted: function () {
@@ -308,7 +316,6 @@ var app = new Vue({
         switchSick(sid){
             this.sickChannel = sid;
             ga('send', 'click', '/sickBtn' + sid);
-            
         },
         playAni: function () {
 
