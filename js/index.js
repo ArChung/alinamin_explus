@@ -54,11 +54,6 @@ var app = new Vue({
                     url: 'https://www.watsons.com.tw/store-finder'
                 },
                 {
-                    name: 'Costco',
-                    img: './images/m15.png',
-                    url: 'https://www.costco.com.tw/store-finder'
-                },
-                {
                     name: 'Cosmed',
                     img: './images/m02.png',
                     url: 'https://www.cosmed.com.tw/Contact/Shop.aspx'
@@ -205,7 +200,7 @@ var app = new Vue({
         showCitiArr: function () {
             var arr = [];
             var data = this.storeData;
-           
+
             if (data.storeCity1 == '' && data.storeCity2 == '') {
                 return arr
             }
