@@ -98,6 +98,97 @@
 
 svg.clip-svg { height: 250px; position: absolute; width: 250px; }
 #svg-1 { left: 0px; top: 0px; }</style>
+
+    <style>
+        .bannerComtainer{
+            position: relative;
+            background-color: none;
+            width: 85vw;
+            height: 100vh;
+            max-width: 503px;
+            margin: 0 auto
+        }
+        
+
+        #banner-pc{
+            position: absolute;
+            width: 503px;
+            height: 600px;
+            top: 50%;
+            left: 50%;
+            margin-left: -251.5px;
+            margin-top: -300px;
+
+        }
+
+        #banner-mb{
+            position: absolute;
+            width: 320px;
+            height: 382px;
+            top: 50%;
+            left: 50%;
+            margin-left: -160px;
+            margin-top: -191px;
+
+        }
+
+        
+
+
+
+        .openBanner{
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            width: 200px;
+            height: auto;
+            z-index: 10;
+            cursor: pointer;
+        }
+
+
+        @media (max-width: 640px) {
+            .openBanner {
+                width: 100px;
+                right: 20px;
+            }
+        }
+
+        .openBanner img{
+            width: 100%;
+        }
+
+        
+    </style>
+
+
+    <script>
+        function open_banner_iframe(){
+            var _pc = '<iframe src="banner/503x600/index.html" frameborder="0" width="503" height="600"></iframe>';
+            var _mb = '<iframe src="banner/320x382/index.html" frameborder="0" width="320" height="382"></iframe>';
+            $('#banner-pc').append(_pc);
+            $('#banner-mb').append(_mb);
+            TweenMax.to('#initBannerBox',.5 ,{autoAlpha: 1,display: 'block'});
+        }
+
+        function close_banner_iframe(){
+            $('#banner-pc').empty();
+            $('#banner-mb').empty();
+            TweenMax.to('#initBannerBox',.5 ,{autoAlpha: 0,display: 'none'});
+        }
+
+        function goto_pp2(){
+            close_banner_iframe();
+            TweenMax.to('body,html',.5 ,{scrollTop: $('.productPage').offset().top});
+        }
+
+        function goto_pp3(){
+            close_banner_iframe();
+            TweenMax.to('body,html',.5 ,{scrollTop: $('.storePage').offset().top});
+        }
+
+    </script>
+
 </head>
 
 <body>
@@ -110,6 +201,18 @@ svg.clip-svg { height: 250px; position: absolute; width: 250px; }
                 </div>
             </div>
         </transition>
+
+        <!-- banner -->
+        <div id="initBannerBox" class="popPage">
+            <div class="bannerComtainer">
+                <div id="banner-pc" class="videoWrap">
+                    <iframe src="banner/503x600/index.html" frameborder="0" width="503" height="600"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="openBanner" onclick="open_banner_iframe();"><img src="images/fix-explus.png" alt=""></div>
+
         <div id="header">
             <div class="innerContainer">
                 <a href="#" class="logo"></a>
