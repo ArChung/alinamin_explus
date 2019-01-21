@@ -221,16 +221,19 @@ var app = new Vue({
         posIndex: function (val) {
             if (this.gaArr.indexOf(val) == -1) {
                 this.gaArr.push(val);
-                ga('send', 'pageview', '/event/section' + val);
+                //ga('send', 'pageview', '/event/section' + val);
+                gtag('config', 'UA-124659146-2', {'page_path': '/event/section'+val});
                 console.log('ga:' + val);
             }
         },
         videoPop: function(val){
             if(val){
                 console.log('open');
-                ga('send', 'event', 'openVideo');
+                //ga('send', 'event', 'openVideo');
+                gtag('event', 'openVideo');
             }else{
-                ga('send', 'event', 'clozVideo');
+                //ga('send', 'event', 'clozVideo');
+                gtag('event', 'clozVideo');
             }
         }
     },
@@ -310,7 +313,8 @@ var app = new Vue({
         },
         switchSick(sid){
             this.sickChannel = sid;
-            ga('send', 'event', 'sickBtn'+ sid);
+            //ga('send', 'event', 'sickBtn'+ sid);
+            gtag('event', 'sickBtn'+ sid);
         },
         playAni: function () {
 
