@@ -169,22 +169,26 @@ svg.clip-svg { height: 250px; position: absolute; width: 250px; }
             $('#banner-pc').append(_pc);
             $('#banner-mb').append(_mb);
             TweenMax.to('#initBannerBox',.5 ,{autoAlpha: 1,display: 'block'});
+            ga('send', 'event', '新春資訊', '開啟');
         }
 
         function close_banner_iframe(){
             $('#banner-pc').empty();
             $('#banner-mb').empty();
             TweenMax.to('#initBannerBox',.5 ,{autoAlpha: 0,display: 'none'});
+            ga('send', 'event', '新春資訊', '關閉');
         }
 
         function goto_pp2(){
             close_banner_iframe();
             TweenMax.to('body,html',.5 ,{scrollTop: $('.productPage').offset().top});
+            ga('send', 'event', '新春資訊', '照顧爸媽第一步');
         }
 
         function goto_pp3(){
             close_banner_iframe();
             TweenMax.to('body,html',.5 ,{scrollTop: $('.storePage').offset().top});
+            ga('send', 'event', '新春資訊', '馬上行動');
         }
 
     </script>
